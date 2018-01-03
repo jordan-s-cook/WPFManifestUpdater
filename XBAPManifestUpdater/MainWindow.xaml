@@ -1,0 +1,34 @@
+﻿<Window x:Class="XBAPManifestUpdater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="500" Width="600"
+		ResizeMode="NoResize"
+		Icon="xbap.png">
+	<Grid>
+		<Image Source="xbap.png" HorizontalAlignment="Left" Height="100" Margin="25,10,0,0" VerticalAlignment="Top" Width="100"/>
+		<Label FontSize="50" Content="XBAP" FontWeight="SemiBold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="130,19,0,0"/>
+		<Label FontSize="25" FontWeight="Bold" Content="Manifest &#xD;&#xA;Updater" HorizontalAlignment="Left" VerticalAlignment="Top" Width="113" Margin="263,19,0,0" Height="86"/>
+		<Button Name="btnUpdate" FontWeight="Bold" FontSize="15" Content="Update" HorizontalAlignment="Left" Margin="506,422,0,0" VerticalAlignment="Top" Width="68" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Height="34" IsEnabled="False" Click="btnUpdate_Click"/>
+		<Button Name="btnBrowse" FontWeight="Bold" FontSize="15" Content="Browse" HorizontalAlignment="Left" Margin="514,149,0,0" VerticalAlignment="Top" Width="60" Height="32" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="btnBrowse_Click"/>
+		<TextBox Name="tbAppFilePath" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="32" Margin="10,149,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="499" TextChanged="tbAppFilePath_TextChanged" IsReadOnly="True"/>
+		<Label FontWeight="Bold" FontSize="15" Content="XBAP File:" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top"/>
+		<ProgressBar Name="pbUpdate" HorizontalAlignment="Left" Height="34" Margin="10,422,0,0" VerticalAlignment="Top" Width="491"/>
+		<Label x:Name="lblApplicationNameLabel" FontWeight="Bold" FontSize="15" Content="Application Name:" HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top"/>
+		<Label Name="lblApplicationName" FontSize="15" Content="" HorizontalAlignment="Left" Margin="156,308,0,0" VerticalAlignment="Top"/>
+		<Label Name="lblVersion" FontWeight="Bold" FontSize="15" Content="Version:" HorizontalAlignment="Left" Margin="10,343,0,0" VerticalAlignment="Top"/>
+		<TextBox Name="tbVersion" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" RenderTransformOrigin="1.191,9.701" Margin="77,343,0,0"/>
+		<Label Name="lblStatusMessage" FontSize="15" Content="" HorizontalAlignment="Left" Margin="10,392,0,0" VerticalAlignment="Top" Width="564"/>
+		<Label FontSize="15" FontWeight="Bold" Content="Certificate:" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top"/>
+		<TextBox Name="tbCertFilePath" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="32" Margin="10,215,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="499" IsReadOnly="True" TextChanged="tbCertFilePath_TextChanged"/>
+		<Button Name="btnBrowseCert" FontWeight="Bold" FontSize="15" Content="Browse" HorizontalAlignment="Left" Margin="514,215,0,0" VerticalAlignment="Top" Width="60" Height="32" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Click="btnBrowseCert_Click"/>
+		<Label x:Name="lblCertificateRequiresPassword" FontWeight="Bold" FontSize="15" Content="Certificate Requires Password:" HorizontalAlignment="Left" Margin="79,256,0,0" VerticalAlignment="Top" Foreground="Red"/>
+		<PasswordBox Name="pwbCertPassword" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="308,256,0,0" VerticalAlignment="Top" Width="201" Height="32" PasswordChanged="pwbCertPassword_PasswordChanged"/>
+		<Button x:Name="btnCheckCertPassword" FontSize="15" HorizontalAlignment="Left" Margin="527,256,0,0" VerticalAlignment="Top" Width="32" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Height="30" IsEnabled="true" Click="btnCheckCertPassword_Click" RenderTransformOrigin="0.477,0.48">
+			<StackPanel>
+				<Image Source="check.png" />
+			</StackPanel>
+		</Button>
+		
+
+	</Grid>
+</Window>
